@@ -1,0 +1,92 @@
+HTML
+
+<!doctype html>
+<html lang="ja">
+<head>
+</head>
+<body>
+<div id="line"></div>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+<script type='text/javascript' src='highcharts.js'></script>
+<script>
+$(function () {
+$('#line').highcharts({
+chart: {
+type: 'line',
+marginRight: 130,
+marginBottom: 25
+},
+title: {
+text: '乗車データ',
+x:-20 //center
+},
+xAxis: {
+categories: [
+'1:00',
+'2:00',
+'3:00',
+'4:00',
+'5:00',
+'6:00',
+'7:00',
+'8:00',
+'9:00',
+'10:00',
+'11:00',
+'12:00',
+'13:00',
+'14:00',
+'15:00',
+'16:00',
+'17:00',
+'18:00',
+'19:00',
+'20:00',
+'21:00',
+'22:00',
+'23:00',
+'0:00'
+]
+},
+yAxis: {
+title: {
+text: '乗車数',
+align: 'middle',
+rotation: -90
+},
+plotLines: [{
+value: 0,
+width: 1,
+color: '#808080'
+}]
+},
+tooltip: {
+valueSuffix: ''
+},
+legend: {
+layout: 'vertical',
+align: 'right',
+verticalAlign: 'top',
+x: -80,
+y: 0,
+borderWidth: 0
+},
+series: [{
+name: 'GATE1',
+data: [400,450,550,300,1,1,1,1,1,1,1,1,1,2,3,4,5,6,88,99,34,122]
+}, {
+name: 'GATE2',
+data: [195,210,250,325,100,130,450,230,1230,900,12,1,1,1]
+}, {
+name: 'GATE3',
+data: [600,435,295,405,23,26,78,99,566,345,234,567,124]
+}, {
+name: 'GATE4',
+data: [550,600,450,650,453,235,679,987,865]
+}]
+});
+});
+
+</script>
+</body>
+</html>
